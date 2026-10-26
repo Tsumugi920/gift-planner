@@ -1,0 +1,17 @@
+{
+  "name": "gift-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gift-planner 送礼灵感 —— 收礼人、礼物灵感（待买/已买）、送礼记录与预算汇总的前后端完整项目",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
