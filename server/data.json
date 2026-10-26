@@ -1,0 +1,374 @@
+{
+  "recipients": [
+    {
+      "id": 1,
+      "name": "林晚晴",
+      "relation": "妈妈",
+      "birthday": "1962-11-08",
+      "likes": "羊绒、丝巾、檀香",
+      "budget": 800,
+      "notes": "喜欢实用又暖心的东西，总念叨别乱花钱"
+    },
+    {
+      "id": 2,
+      "name": "陈志远",
+      "relation": "爸爸",
+      "birthday": "1960-03-15",
+      "likes": "茶叶、钓鱼、评书",
+      "budget": 1000,
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "name": "苏小满",
+      "relation": "女朋友",
+      "birthday": "1998-12-20",
+      "likes": "口红、手账、猫",
+      "budget": 1500,
+      "notes": "恋爱纪念日：2019-06-15"
+    },
+    {
+      "id": 4,
+      "name": "王一帆",
+      "relation": "同事",
+      "birthday": "1992-01-10",
+      "likes": "咖啡、桌游、骑行",
+      "budget": 200,
+      "notes": "年会交换礼物的对象"
+    },
+    {
+      "id": 5,
+      "name": "老周",
+      "relation": "领导",
+      "birthday": "1980-06-01",
+      "likes": "书法、紫砂、普洱",
+      "budget": 600,
+      "notes": "心意为主，别太贵重"
+    },
+    {
+      "id": 6,
+      "name": "林小树",
+      "relation": "儿子",
+      "birthday": "2018-04-23",
+      "likes": "乐高、恐龙、绘本",
+      "budget": 500,
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "name": "赵阿姨",
+      "relation": "邻居",
+      "birthday": "1975-11-15",
+      "likes": "绿植、烘焙、广场舞",
+      "budget": 150,
+      "notes": "常帮我们收快递"
+    },
+    {
+      "id": 8,
+      "name": "沈知行",
+      "relation": "大学室友",
+      "birthday": "1996-07-19",
+      "likes": "球鞋、手办、脱口秀",
+      "budget": 400,
+      "notes": ""
+    }
+  ],
+  "gifts": [
+    {
+      "id": 1,
+      "recipientId": 1,
+      "name": "羊绒围巾",
+      "category": "服饰",
+      "price": 680,
+      "status": "to-buy",
+      "occasion": "生日",
+      "notes": "浅灰色，衬气色",
+      "createdAt": "2026-10-02T09:20:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 2,
+      "recipientId": 1,
+      "name": "护手霜礼盒",
+      "category": "美妆护肤",
+      "price": 158,
+      "status": "bought",
+      "occasion": "生日",
+      "notes": "滋润不油腻，她用过同款",
+      "createdAt": "2026-09-28T02:10:00.000Z",
+      "boughtAt": "2026-10-12T11:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "recipientId": 2,
+      "name": "紫砂茶具套装",
+      "category": "茶具",
+      "price": 459,
+      "status": "to-buy",
+      "occasion": "春节",
+      "notes": "配他那饼普洱",
+      "createdAt": "2026-10-05T06:40:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 4,
+      "recipientId": 2,
+      "name": "钓鱼竿升级套装",
+      "category": "户外",
+      "price": 899,
+      "status": "to-buy",
+      "occasion": "春节",
+      "notes": "旧的那根已经掉了三次漆",
+      "createdAt": "2026-10-05T06:41:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 5,
+      "recipientId": 2,
+      "name": "智能保温杯",
+      "category": "生活家电",
+      "price": 199,
+      "status": "bought",
+      "occasion": "生日",
+      "notes": "",
+      "createdAt": "2026-02-20T08:00:00.000Z",
+      "boughtAt": "2026-03-10T09:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "recipientId": 3,
+      "name": "口红 #999",
+      "category": "美妆",
+      "price": 330,
+      "status": "bought",
+      "occasion": "恋爱纪念日",
+      "notes": "今年 6 月送过了，下半年别再送口红",
+      "createdAt": "2026-06-01T03:00:00.000Z",
+      "boughtAt": "2026-06-12T05:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "recipientId": 3,
+      "name": "手账本 + 钢笔套装",
+      "category": "文具",
+      "price": 220,
+      "status": "to-buy",
+      "occasion": "圣诞",
+      "notes": "",
+      "createdAt": "2026-10-08T10:00:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 8,
+      "recipientId": 3,
+      "name": "香薰蜡烛礼盒",
+      "category": "家居",
+      "price": 189,
+      "status": "to-buy",
+      "occasion": "圣诞",
+      "notes": "选无烟大豆蜡",
+      "createdAt": "2026-10-08T10:01:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 9,
+      "recipientId": 4,
+      "name": "挂耳咖啡礼盒",
+      "category": "食品",
+      "price": 128,
+      "status": "to-buy",
+      "occasion": "元旦",
+      "notes": "深烘，他只喝美式",
+      "createdAt": "2026-10-10T07:15:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 10,
+      "recipientId": 4,
+      "name": "桌游《璀璨宝石》",
+      "category": "娱乐",
+      "price": 168,
+      "status": "to-buy",
+      "occasion": "元旦",
+      "notes": "",
+      "createdAt": "2026-10-10T07:16:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 11,
+      "recipientId": 4,
+      "name": "乳胶护颈枕",
+      "category": "生活家居",
+      "price": 239,
+      "status": "bought",
+      "occasion": "生日",
+      "notes": "他总趴在工位睡觉",
+      "createdAt": "2025-12-20T09:00:00.000Z",
+      "boughtAt": "2026-01-05T09:30:00.000Z"
+    },
+    {
+      "id": 12,
+      "recipientId": 5,
+      "name": "紫砂品茗杯",
+      "category": "茶具",
+      "price": 350,
+      "status": "to-buy",
+      "occasion": "中秋",
+      "notes": "",
+      "createdAt": "2026-09-01T02:00:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 13,
+      "recipientId": 5,
+      "name": "手工兼毫毛笔礼盒",
+      "category": "文房",
+      "price": 260,
+      "status": "bought",
+      "occasion": "年会",
+      "notes": "",
+      "createdAt": "2026-01-08T02:00:00.000Z",
+      "boughtAt": "2026-01-20T02:30:00.000Z"
+    },
+    {
+      "id": 14,
+      "recipientId": 6,
+      "name": "乐高城市消防局",
+      "category": "玩具",
+      "price": 399,
+      "status": "to-buy",
+      "occasion": "生日",
+      "notes": "明年生日他点名要这个",
+      "createdAt": "2026-04-01T12:00:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 15,
+      "recipientId": 6,
+      "name": "恐龙科普绘本全套",
+      "category": "图书",
+      "price": 96,
+      "status": "bought",
+      "occasion": "儿童节",
+      "notes": "",
+      "createdAt": "2026-05-20T03:00:00.000Z",
+      "boughtAt": "2026-05-28T03:20:00.000Z"
+    },
+    {
+      "id": 16,
+      "recipientId": 7,
+      "name": "多肉绿植组合",
+      "category": "家居",
+      "price": 88,
+      "status": "to-buy",
+      "occasion": "乔迁",
+      "notes": "她家新装了阳台花架",
+      "createdAt": "2026-10-15T01:30:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 17,
+      "recipientId": 7,
+      "name": "手工绿豆糕礼盒",
+      "category": "食品",
+      "price": 76,
+      "status": "bought",
+      "occasion": "中秋",
+      "notes": "",
+      "createdAt": "2026-09-18T02:00:00.000Z",
+      "boughtAt": "2026-09-20T02:10:00.000Z"
+    },
+    {
+      "id": 18,
+      "recipientId": 8,
+      "name": "复古篮球鞋",
+      "category": "服饰",
+      "price": 659,
+      "status": "to-buy",
+      "occasion": "生日",
+      "notes": "42 码，白色",
+      "createdAt": "2026-07-01T09:00:00.000Z",
+      "boughtAt": null
+    },
+    {
+      "id": 19,
+      "recipientId": 8,
+      "name": "手办「星空旅人」",
+      "category": "收藏",
+      "price": 299,
+      "status": "bought",
+      "occasion": "圣诞",
+      "notes": "",
+      "createdAt": "2025-12-10T09:00:00.000Z",
+      "boughtAt": "2025-12-22T09:40:00.000Z"
+    },
+    {
+      "id": 20,
+      "recipientId": 1,
+      "name": "真丝眼罩",
+      "category": "生活家居",
+      "price": 129,
+      "status": "to-buy",
+      "occasion": "妇女节",
+      "notes": "和围巾一起凑个礼盒",
+      "createdAt": "2026-10-12T08:45:00.000Z",
+      "boughtAt": null
+    }
+  ],
+  "records": [
+    {
+      "id": 1,
+      "recipientId": 3,
+      "giftName": "星月银项链",
+      "occasion": "恋爱纪念日",
+      "date": "2026-06-15",
+      "amount": 1290,
+      "notes": "第七年啦"
+    },
+    {
+      "id": 2,
+      "recipientId": 3,
+      "giftName": "玫瑰花束 + 巧克力",
+      "occasion": "情人节",
+      "date": "2026-02-14",
+      "amount": 520,
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "recipientId": 6,
+      "giftName": "遥控越野赛车",
+      "occasion": "儿童节",
+      "date": "2026-06-01",
+      "amount": 268,
+      "notes": "在小区里跑了一下午"
+    },
+    {
+      "id": 4,
+      "recipientId": 7,
+      "giftName": "蛋黄酥礼盒",
+      "occasion": "中秋",
+      "date": "2026-09-25",
+      "amount": 118,
+      "notes": "回赠她送的桂花糕"
+    },
+    {
+      "id": 5,
+      "recipientId": 4,
+      "giftName": "台历 + 保温杯",
+      "occasion": "元旦",
+      "date": "2026-01-01",
+      "amount": 150,
+      "notes": "办公室交换礼物"
+    },
+    {
+      "id": 6,
+      "recipientId": 8,
+      "giftName": "蓝牙降噪耳机",
+      "occasion": "圣诞",
+      "date": "2025-12-25",
+      "amount": 399,
+      "notes": "他打游戏用得上"
+    }
+  ]
+}
