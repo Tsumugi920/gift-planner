@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>送礼灵感 · gift-planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div>
+        <h1>🎁 送礼灵感 <span class="en">gift-planner</span></h1>
+        <p class="tagline">收礼人、灵感、记录与预算，把每一份心意都提前安排好</p>
+      </div>
+      <div class="topbar-hint">数据持久化于 server/data.json</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="reminder-banner" class="reminder-banner hidden"></div>
+
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="recipients">👤 收礼人</button>
+      <button class="tab" data-tab="gifts">🎁 礼物灵感</button>
+      <button class="tab" data-tab="records">📜 送礼记录</button>
+      <button class="tab" data-tab="stats">💰 预算汇总</button>
+    </nav>
+
+    <!-- 收礼人 -->
+    <section id="panel-recipients" class="panel active">
+      <div class="split">
+        <form id="recipient-form" class="card form-card">
+          <h2 id="recipient-form-title" class="full">新增收礼人</h2>
+          <label>姓名 *
+            <input id="recipient-name" required placeholder="例如：林晚晴" />
+          </label>
+          <label>关系
+            <input id="recipient-relation" placeholder="妈妈 / 同事 / 朋友…" />
+          </label>
+          <label>生日
+            <input id="recipient-birthday" type="date" />
+          </label>
+          <label>年度预算（元）
+            <input id="recipient-budget" type="number" min="0" step="1" placeholder="800" />
+          </label>
+          <label class="full">喜好
+            <input id="recipient-likes" placeholder="丝巾、檀香、茶…" />
+          </label>
+          <label class="full">备注
+            <input id="recipient-notes" placeholder="想提醒自己的话" />
+          </label>
+          <div class="form-actions full">
+            <button type="submit" class="btn primary" id="recipient-submit">保存收礼人</button>
+            <button type="reset" class="btn ghost hidden" id="recipient-cancel">取消编辑</button>
+          </div>
+        </form>
+        <div id="recipient-list" class="card-grid"></div>
+      </div>
+    </section>
+
+    <!-- 礼物灵感 -->
+    <section id="panel-gifts" class="panel">
+      <div class="toolbar card">
+        <div class="segmented" id="gift-status-filter">
+          <button type="button" class="seg-btn active" data-status="all">全部</button>
+          <button type="button" class="seg-btn" data-status="to-buy">待买</button>
+          <button type="button" class="seg-btn" data-status="bought">已买</button>
+        </div>
+        <select id="gift-recipient-filter"></select>
+        <input id="gift-search" type="search" placeholder="搜索礼物 / 类别 / 场合…" />
+      </div>
+      <div class="split">
+        <form id="gift-form" class="card form-card">
+          <h2 id="gift-form-title" class="full">添加礼物灵感</h2>
+          <label>送给谁 *
+            <select id="gift-recipient" required></select>
+          </label>
+          <label>礼物名称 *
+            <input id="gift-name" required placeholder="例如：羊绒围巾" />
+          </label>
+          <label>类别
+            <input id="gift-category" placeholder="服饰 / 美妆 / 玩具…" />
+          </label>
+          <label>预估价格（元）
+            <input id="gift-price" type="number" min="0" step="1" placeholder="300" />
+          </label>
+          <label>场合
+            <input id="gift-occasion" placeholder="生日 / 春节 / 纪念日…" />
+          </label>
+          <label class="full">备注
+            <input id="gift-notes" placeholder="色号、尺寸、链接…" />
+          </label>
+          <div class="form-actions full">
+            <button type="submit" class="btn primary" id="gift-submit">保存灵感</button>
+            <button type="reset" class="btn ghost hidden" id="gift-cancel">取消编辑</button>
+          </div>
+        </form>
+        <div id="gift-list" class="card-grid"></div>
+      </div>
+    </section>
+
+    <!-- 送礼记录 -->
+    <section id="panel-records" class="panel">
+      <div class="split">
+        <form id="record-form" class="card form-card">
+          <h2 id="record-form-title" class="full">记一笔送礼</h2>
+          <label>送给谁 *
+            <select id="record-recipient" required></select>
+          </label>
+          <label>礼物名称 *
+            <input id="record-gift-name" required placeholder="例如：蛋黄酥礼盒" />
+          </label>
+          <label>场合
+            <input id="record-occasion" placeholder="生日 / 中秋 / 探望…" />
+          </label>
+          <label>日期 *
+            <input id="record-date" type="date" required />
+          </label>
+          <label>金额（元）
+            <input id="record-amount" type="number" min="0" step="1" placeholder="200" />
+          </label>
+          <label class="full">备注
+            <input id="record-notes" placeholder="对方的反应、后续…" />
+          </label>
+          <div class="form-actions full">
+            <button type="submit" class="btn primary" id="record-submit">保存记录</button>
+            <button type="reset" class="btn ghost hidden" id="record-cancel">取消编辑</button>
+          </div>
+        </form>
+        <div class="card table-card">
+          <h2>送礼流水</h2>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>日期</th><th>收礼人</th><th>礼物</th><th>场合</th>
+                  <th class="num">金额</th><th>备注</th><th></th>
+                </tr>
+              </thead>
+              <tbody id="record-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 预算汇总 -->
+    <section id="panel-stats" class="panel">
+      <div id="stats-summary" class="stat-cards"></div>
+      <div id="stats-table" class="card table-card"></div>
+    </section>
+
+    <footer class="footer">gift-planner · Node + Express + 原生 JS · 数据持久化于 server/data.json</footer>
+  </div>
+
+  <noscript>本应用需要启用 JavaScript 才能使用。</noscript>
+  <div id="toast" class="toast"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
